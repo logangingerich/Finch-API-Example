@@ -8,7 +8,7 @@ export default async function DownloadCompany(req: NextApiRequest, res: NextApiR
 
     if (req.method == 'GET') {
         try {
-            const token = await database.getConnectionToken()
+            const token = process.env.FINCH_ACCESS_TOKEN;
             const apiUrl = (await database.isSandbox()) ? sandboxApiUrl : finchApiUrl
 
             // Get connection details

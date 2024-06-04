@@ -7,7 +7,7 @@ export default async function Directory(req: NextApiRequest, res: NextApiRespons
     console.log(req.method + " /api/finch/directory ")
 
     if (req.method == 'GET') {
-        const token = await database.getConnectionToken()
+        const token = process.env.FINCH_ACCESS_TOKEN;
         const apiUrl = (await database.isSandbox()) ? sandboxApiUrl : finchApiUrl
 
         const directoryRes = await axios.get(`${apiUrl}/employer/directory`, {

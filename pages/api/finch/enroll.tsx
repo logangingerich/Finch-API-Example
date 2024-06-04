@@ -9,7 +9,7 @@ export default async function Enroll(req: NextApiRequest, res: NextApiResponse) 
         const { individual_id, type, amount, benefit_id } = req.body;
         console.log("Request Body: " + JSON.stringify(req.body));
 
-        const token = await database.getConnectionToken();
+        const token = process.env.FINCH_ACCESS_TOKEN;
         const apiUrl = await database.isSandbox() ? sandboxApiUrl : finchApiUrl;
 
         const axiosRes = await axios.post(`${apiUrl}/employer/benefits/${benefit_id}/individuals`, [{

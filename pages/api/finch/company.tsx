@@ -7,7 +7,7 @@ export default async function Company(req: NextApiRequest, res: NextApiResponse)
     console.log(req.method + " /api/finch/company ");
 
     if (req.method == 'GET') {
-        const token = await database.getConnectionToken()
+        const token = process.env.FINCH_ACCESS_TOKEN;
         const apiUrl = (await database.isSandbox()) ? sandboxApiUrl : finchApiUrl
 
 

@@ -4,6 +4,7 @@ import { ExclamationCircleIcon } from '@heroicons/react/outline'
 
 
 export default function Connection() {
+  const ac = process.env.FINCH_ACCESS_TOKEN;
   const { data, error, isValidating } = useSWR('/api/finch/introspect', { shouldRetryOnError: false, errorRetryInterval: 0, })
   const [token, setToken] = useState<FinchToken>();
 

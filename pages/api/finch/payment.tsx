@@ -9,7 +9,7 @@ export default async function Payment(req: NextApiRequest, res: NextApiResponse)
     const { start_date, end_date } = req.query
 
     if (req.method == 'GET') {
-        const token = await database.getConnectionToken()
+        const token = process.env.FINCH_ACCESS_TOKEN;
         const apiUrl = (await database.isSandbox()) ? sandboxApiUrl : finchApiUrl
 
         const axiosRes = await axios.get(`${apiUrl}/employer/payment?start_date=${start_date}&end_date=${end_date}`, {
