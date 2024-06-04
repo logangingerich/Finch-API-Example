@@ -21,7 +21,7 @@ export function FinchConnect(options?: FinchConnectOptions) {
     const redirectFinchConnect = `https://connect.tryfinch.com/authorize?client_id=${process.env.NEXT_PUBLIC_FINCH_CLIENT_ID}&products=${products.join(' ')}&sandbox=provider&state=testing123&redirect_uri=${baseUrl}/api/finch/callback`
     
     const { open: embeddedFinchConnect } = useFinchConnect({
-        clientId: process.env.NEXT_PUBLIC_FINCH_CLIENT_ID,
+        clientId: process.env.NEXT_PUBLIC_FINCH_CLIENT_ID || "",
         products: products,
         sandbox: 'provider', // Set sandbox=false if using Dev or Prod credentials
         manual: false,
