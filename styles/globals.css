@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    background-color: #FAF9F6;
+}
+
+/******************
+  NProgress Bar Styles 
+******************  */
+
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+}
+
+#nprogress .bar {
+    background: #29d;
+
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+    opacity: 1.0;
+
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 50%;
+    left: 50%;
+}
+
+#nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+
+    border: solid 2px transparent;
+    border-top-color: #29d;
+    border-left-color: #29d;
+    border-radius: 50%;
+
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/**************************
+    Multi Range Slider Styles
+***************************/
+
+.container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    position: relative;
+    width: 800px;
+}
+
+.slider__track,
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+    position: absolute;
+}
+
+.slider__track,
+.slider__range {
+    border-radius: 3px;
+    height: 5px;
+}
+
+.slider__track {
+    background-color: #ced4da;
+    width: 100%;
+    z-index: 1;
+}
+
+.slider__range {
+    background-color: #4F46E5;
+    z-index: 2;
+}
+
+.slider__left-value,
+.slider__right-value {
+    color: #6B7280;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.slider__left-value {
+    left: 6px;
+}
+
+.slider__right-value {
+    right: -4px;
+}
+
+/* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+    pointer-events: none;
+    position: absolute;
+    height: 0;
+    width: 800px;
+    outline: none;
+}
+
+.thumb--zindex-3 {
+    z-index: 3;
+}
+
+.thumb--zindex-4 {
+    z-index: 4;
+}
+
+.thumb--zindex-5 {
+    z-index: 5;
+}
+
+/* For Chrome browsers */
+
+.thumb::-webkit-slider-thumb {
+    background-color: #f1f5f7;
+    border: none;
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 25px;
+    width: 15px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+.left-thumb::-webkit-slider-thumb {
+    border-radius: 100% 0 0 100%;
+
+}
+
+.right-thumb::-webkit-slider-thumb {
+    border-radius: 0 50% 50% 0;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+    background-color: #f1f5f7;
+    border: none;
+
+    box-shadow: 0 0 1px 1px #ced4da;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin-top: 4px;
+    pointer-events: all;
+    position: relative;
+}
+
+.left-thumb::-moz-range-thumb {
+    border-radius: 50%;
+}
+
+.right-thumb::-moz-range-thumb {
+    border-radius: 50%;
+}
