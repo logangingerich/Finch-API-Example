@@ -23,7 +23,7 @@ export function FinchConnect(options?: FinchConnectOptions) {
     const { open: embeddedFinchConnect } = useFinchConnect({
         clientId: process.env.NEXT_PUBLIC_FINCH_CLIENT_ID || "",
         products: products,
-        sandbox: 'provider', // Set sandbox=false if using Dev or Prod credentials
+        sandbox: !!'provider', // Set sandbox=false if using Dev or Prod credentials
         manual: false,
         onSuccess,
         onError,
