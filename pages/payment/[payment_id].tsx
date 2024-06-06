@@ -30,7 +30,7 @@ export default function Payment() {
   if (!data?.responses || !payments) return "";
 
   return (
-    <div className="bg-white py-12">
+    <div className="py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <h2 className="text-base font-semibold uppercase tracking-wide text-indigo-600">

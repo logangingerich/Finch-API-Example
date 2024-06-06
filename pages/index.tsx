@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center px-20 text-center mt-28 flex-grow">
+      <main className="flex w-full flex-1 flex-col items-center px-20 text-center mt-12 flex-grow">
         <h1 className="text-6xl font-bold text-indigo-600">
           Finch API Responses
         </h1>
@@ -21,7 +21,6 @@ const Home: NextPage = () => {
           Use the tabs above to navigate between data sets
         </p>
         <br></br>
-        <hr className="w-full my-8" />
         <br></br>
         <div className="flex-shrink-0 flex items-center">
           <img
