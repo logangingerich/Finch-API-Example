@@ -18,8 +18,10 @@ const Home: NextPage = () => {
         </h1>
 
         <p className="mt-3 text-2xl max-w-xl">
-          Use the dropdown on the top right to navigate between data sets
+          Use the tabs above to navigate between data sets
         </p>
+        <br></br>
+        <hr className="w-full my-8" />
         <br></br>
         <div className="flex-shrink-0 flex items-center">
           <img

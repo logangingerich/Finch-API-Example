@@ -49,7 +49,6 @@ export default function Connection() {
                         <tr>
                           <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Provider_ID</th>
                           <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Company_ID</th>
-                          <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Username</th>
                           <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Products</th>
                           {/* <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Manual</th> */}
                           <th scope="col" className="relative py-3.5 pl-3 pr-4 sm:pr-6">
@@ -61,12 +60,7 @@ export default function Connection() {
                         <tr className="border-t border-gray-300" key={1}>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{token.payroll_provider_id}</td>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{token.company_id}</td>
-                          <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{token.username}</td>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{JSON.stringify(token.products, null, 2)}</td>
-                          {/* <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{JSON.stringify(item.info.manual)}</td> */}
-                          <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                            <button onClick={() => disconnect()} className="text-indigo-600 hover:text-indigo-900">Disconnect<span className="sr-only">{token.client_id}</span></button>
-                          </td>
                         </tr>
 
                       </tbody>
