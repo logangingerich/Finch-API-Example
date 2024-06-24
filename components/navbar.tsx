@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Company', href: '/company', download: true, downloadLink: "/api/finch/download/company", current: false },
   { name: 'Directory', href: '/directory', download: true, downloadLink: "/api/finch/download/organization", current: false },
   { name: 'Payroll', href: '/payroll', download: true, downloadLink: "/api/finch/download/payroll", current: false },
+  { name: 'Flatfile', href: '/flatfile', download: true, downloadLink: "/api/finch/download/flatfile", current: false },
 ]
 
 const finchOptions = {

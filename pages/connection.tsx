@@ -57,7 +57,7 @@ export default function Connection() {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr className="border-t border-gray-300" key={1}>
+                        <tr className="bg-white border-t border-gray-300" key={1}>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{token.payroll_provider_id}</td>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{token.company_id}</td>
                           <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-900">{JSON.stringify(token.products, null, 2)}</td>
